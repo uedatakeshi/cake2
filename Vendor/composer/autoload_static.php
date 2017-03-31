@@ -28,6 +28,23 @@ class ComposerStaticInit72313c88cd92989c63fc39e81128ef90
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'W' => 
+        array (
+            'WideImage' => 
+            array (
+                0 => __DIR__ . '/..' . '/smottt/wideimage/lib',
+            ),
+        ),
+        'P' => 
+        array (
+            'PHPExcel' => 
+            array (
+                0 => __DIR__ . '/..' . '/phpoffice/phpexcel/Classes',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',
@@ -631,6 +648,7 @@ class ComposerStaticInit72313c88cd92989c63fc39e81128ef90
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit72313c88cd92989c63fc39e81128ef90::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit72313c88cd92989c63fc39e81128ef90::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit72313c88cd92989c63fc39e81128ef90::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit72313c88cd92989c63fc39e81128ef90::$classMap;
 
         }, null, ClassLoader::class);
