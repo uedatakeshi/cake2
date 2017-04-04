@@ -12,6 +12,8 @@
 		echo $this->Form->input('email');
 		echo $this->Form->input('role');
 		echo $this->Form->input('status');
+        echo $this->Form->input('User.photo', array('type' => 'file'));
+        echo $this->Form->input('User.photo_dir', array('type' => 'hidden'));
 	?>
         <input class="myupload" type="file" name="files[0]" data-key="0" data-url="<?php echo $this->Html->url('/uploads/add/bimage', true);?>"><span class="mydelete" data-key="0" data-url="<?php echo $this->Html->url('/uploads/del/bimage', true);?>">X</span>
 <div class="myimage"><img id="preview0" width="50" height="50" src=""></div>

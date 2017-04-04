@@ -47,6 +47,9 @@
 			&nbsp;
 		</dd>
 	</dl>
+<?php
+echo $this->Html->link('../files/user/photo/' . $user['User']['photo_dir'] . '/' . $user['User']['photo']);
+?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
