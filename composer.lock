@@ -46,16 +46,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "2.9.6",
+            "version": "2.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "03e7fa0710b37f44bd1d90c4ecc8bf4d4bdded6d"
+                "reference": "6cdb2d2905813c35bf7674cd77c347f50449c494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/03e7fa0710b37f44bd1d90c4ecc8bf4d4bdded6d",
-                "reference": "03e7fa0710b37f44bd1d90c4ecc8bf4d4bdded6d",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/6cdb2d2905813c35bf7674cd77c347f50449c494",
+                "reference": "6cdb2d2905813c35bf7674cd77c347f50449c494",
                 "shasum": ""
             },
             "require": {
@@ -81,11 +81,11 @@
                 }
             ],
             "description": "The CakePHP framework",
-            "homepage": "http://cakephp.org",
+            "homepage": "https://cakephp.org",
             "keywords": [
                 "framework"
             ],
-            "time": "2017-03-01T03:27:17+00:00"
+            "time": "2017-04-02T02:09:17+00:00"
         },
         {
             "name": "composer/installers",

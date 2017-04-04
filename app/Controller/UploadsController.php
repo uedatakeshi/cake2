@@ -1,6 +1,5 @@
 <?php
 App::uses('AppController', 'Controller');
-App::import('Vendor', 'WideImage', array('file' => ROOT . DS . 'Vendor/smottt/wideimage/lib/WideImage/WideImage.php'));
 
 /**
  * Uploads Controller
@@ -160,24 +159,24 @@ class UploadsController extends AppController {
  * @return void
  */
 	public function saveTempImage($myFile, $filedata) {
-		/*
-		$res = fopen($myFile['temp_img'], 'w');
-		fwrite($res, $filedata);
-		fclose($res);
-		 */
-		$image = WideImage::load($filedata);
+
+        $image = \WideImage\WideImage::load($filedata);
+
+        // オリジナル
 		$image->saveToFile($myFile['temp_img']);
 
-		$image = WideImage::load($myFile['temp_img']);
+		// サムネイル中
 		$resized = $image->resize(190, 135, 'inside');
 		$resized->saveToFile($myFile['temp_img_m']);
 
+		// サムネイル小
 		$resized = $image->resize(120, 80, 'inside');
 		$resized->saveToFile($myFile['temp_img_s']);
 	}
 
 /**
  * saveImage method
+ * どこで使ってる？
  *
  * @param array $myFile ファイル情報
  * @param string $filedata ファイルデータ
@@ -194,7 +193,7 @@ class UploadsController extends AppController {
 		fwrite($res, $filedata);
 		fclose($res);
 
-		$image = WideImage::load($imgFileFullPath);
+		$image = \WideImage\WideImage::load($imgFileFullPath);
 		$resized = $image->resize(190, 135, 'inside');
 		$resized->saveToFile(WWW_ROOT . "files/" . $myFile['img_dir'] . "/s_" . $myFile['img_name']);
 	}
